@@ -1,0 +1,84 @@
+Index: main.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># This is a sample Python script.\r\n\r\n# Press Shift+F10 to execute it or replace it with your code.\r\n# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.\r\n\r\n\r\ndef print_hi(name):\r\n    # Use a breakpoint in the code line below to debug your script.\r\n    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.\r\n\r\n\r\n# Press the green button in the gutter to run the script.\r\nif __name__ == '__main__':\r\n    print_hi('PyCharm')\r\n\r\n# See PyCharm help at https://www.jetbrains.com/help/pycharm/\r\n#cock and balls
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/main.py b/main.py
+--- a/main.py	(revision 5f6fe71a27619a0e1fea29a5ce4b7992a7a42ce9)
++++ b/main.py	(date 1678004220726)
+@@ -1,17 +1,23 @@
+-# This is a sample Python script.
++import os
++import discord, asyncio
++import random
++#import dotenv
++from discord.ext import commands
++from discord.utils import get
+ 
+-# Press Shift+F10 to execute it or replace it with your code.
+-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
++#dotenv.load_dotenv()
++Token = ("MTA4MTgzOTU1MDU2Mjg0MDYyNg.G9EQOY.o8XMnxBdkovLW6VRwVJ0QjgZct5JHEN3xoosK8")
++intents = discord.Intents.default()
++intents.message_content = True
++client = discord.Client(intents=intents)
++bot = commands.Bot(command_prefix='$', intents=intents)
+ 
+ 
+-def print_hi(name):
+-    # Use a breakpoint in the code line below to debug your script.
+-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
++@bot.event
++async def on_ready():
++    print (f'{bot.user} has connected to Discord!')
+ 
+ 
+-# Press the green button in the gutter to run the script.
+-if __name__ == '__main__':
+-    print_hi('PyCharm')
+ 
+-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+-#cock and balls
+\ No newline at end of file
++
++bot.run(Token)
+\ No newline at end of file
+Index: .idea/Discord-bot.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<module type=\"PYTHON_MODULE\" version=\"4\">\r\n  <component name=\"NewModuleRootManager\">\r\n    <content url=\"file://$MODULE_DIR$\" />\r\n    <orderEntry type=\"inheritedJdk\" />\r\n    <orderEntry type=\"sourceFolder\" forTests=\"false\" />\r\n  </component>\r\n</module>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/Discord-bot.iml b/.idea/Discord-bot.iml
+--- a/.idea/Discord-bot.iml	(revision 5f6fe71a27619a0e1fea29a5ce4b7992a7a42ce9)
++++ b/.idea/Discord-bot.iml	(date 1678002776617)
+@@ -2,7 +2,7 @@
+ <module type="PYTHON_MODULE" version="4">
+   <component name="NewModuleRootManager">
+     <content url="file://$MODULE_DIR$" />
+-    <orderEntry type="inheritedJdk" />
++    <orderEntry type="jdk" jdkName="Python 3.11" jdkType="Python SDK" />
+     <orderEntry type="sourceFolder" forTests="false" />
+   </component>
+ </module>
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ProjectRootManager\" version=\"2\" project-jdk-name=\"Python 3.9\" project-jdk-type=\"Python SDK\" />\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 5f6fe71a27619a0e1fea29a5ce4b7992a7a42ce9)
++++ b/.idea/misc.xml	(date 1678002776625)
+@@ -1,4 +1,4 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+-  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.9" project-jdk-type="Python SDK" />
++  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.11" project-jdk-type="Python SDK" />
+ </project>
+\ No newline at end of file
