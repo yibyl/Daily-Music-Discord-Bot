@@ -101,7 +101,7 @@ async def daily():
 async def on_ready():
     print(f'{bot.user} has connected to Discord!')
     scheduler = AsyncIOScheduler()
-    scheduler.add_job(daily, CronTrigger(second="0, 10, 20, 30, 40, 50"))
+    scheduler.add_job(daily, CronTrigger(hour="0",minute="0",second="0"))
     scheduler.start()
 
 
